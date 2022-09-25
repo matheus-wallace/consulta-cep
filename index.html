@@ -9,21 +9,30 @@
 </head>
 
 <body>
-  <main class="container">
-    <form action="GET" class="container__form">
-      <h1>Informe os dados para consulta</h1>
-      <label for="input_cep">CEP</label>
-      <input type="text" name="" id="input_cep" required placeholder="00.000-000" maxlength="8">
-      <button>Adicionar CEP</button>
-      <button type="submit">Consultar</button>
+  <main class="main">
+    <form action="GET" class="main__form">
+      <h1 class="form__title">Informe os dados para consulta</h1>
+      <label for="form__label">CEP</label>
+      <input type="text" name="" id="form__inputCEP" class="form__inputCEP" required placeholder="00.000-000" maxlength="8">
+      <button class="form__createInput">Adicionar CEP</button>
+      <button type="submit" class="form__buttonRequest">Consultar</button>
     </form>
-    <article class="container__result">
+    <article class="article__result">
       <h1 class="result__title">Resultado da consulta</h1>
       <p class="result__cep">CEP: </p>
-      <p class="result__">Logradouro: </p>
-      <p>Bairro: </p>
-      <p>Localidade: </p>
+      <p class="result__publicplace">Logradouro: </p>
+      <p class="result__district">Bairro: </p>
+      <p class="result__locale">Localidade: </p>
     </article>
+
+    <!-- import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- import jquery mask plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    i
+    <!-- aplying the mask for cep input -->
+    <script src="./js/mask.js"></script>
   </main>
 </body>
 
