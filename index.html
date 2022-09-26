@@ -12,8 +12,10 @@
   <main class="main">
     <form action="GET" class="main__form">
       <h1 class="form__title">Informe os dados para consulta</h1>
-      <label for="form__label">CEP</label>
-      <input type="text" name="" id="form__inputCEP" class="form__inputCEP" required placeholder="00.000-000" maxlength="8">
+      <label for="form__inputCEP">CEP</label>
+      <div class="form__inputContainer">
+        <input type="text" name="form__inputCEP" id="form__inputCEP" class="form__inputCEP" placeholder="00.000-000" maxlength="8" data-mask="00.000-000" required>
+      </div>
       <button class="form__createInput">Adicionar CEP</button>
       <button type="submit" class="form__buttonRequest">Consultar</button>
     </form>
@@ -22,7 +24,7 @@
       <p class="result__cep">CEP: </p>
       <p class="result__publicplace">Logradouro: </p>
       <p class="result__district">Bairro: </p>
-      <p class="result__locale">Localidade: </p>
+      <p class="result__locale">Localidade:</p>
     </article>
 
     <!-- import jquery -->
@@ -30,9 +32,12 @@
 
     <!-- import jquery mask plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    i
+
     <!-- aplying the mask for cep input -->
     <script src="./js/mask.js"></script>
+
+    <!-- create and remove adicional inputs  -->
+    <script src="js/inputGenerator.js"></script>
   </main>
 </body>
 
