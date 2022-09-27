@@ -1,7 +1,7 @@
 const newInputCEP = document.querySelector(".form__createInput")
 const inputContianer = document.querySelector(".form__inputContainer")
 
-function createNewInput(){
+function createNewInput(event){
   if (inputContianer.children.length < 9) {
     const input = document.createElement("input")
     input.className = "form__inputCEP"
